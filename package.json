@@ -13,13 +13,17 @@
     "@babel/runtime": "^7.27.6",
     "@crustio/type-definitions": "^1.3.0",
     "@helia/http": "^2.1.2",
+    "@helia/json": "^4.0.6",
     "@helia/routers": "^3.1.2",
     "@helia/unixfs": "^5.0.3",
     "@polkadot/api": "^16.2.1",
+    "@polkadot/keyring": "^13.5.1",
     "@prisma/client": "^6.9.0",
     "dotenv": "^16.5.0",
+    "ethers": "^6.14.3",
     "helia": "^5.4.2",
     "ipfs-http-client": "^56.0.3",
+    "js-ipfs-fetch": "^5.1.0",
     "multiformats": "^13.3.7"
   }
 }
