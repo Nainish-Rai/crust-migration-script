@@ -1,12 +1,11 @@
-import fs from "fs/promises"; // Use promise-based fs for async/await
+import fs from "fs/promises";
 import path from "path";
 import { ApiPromise, WsProvider } from "@polkadot/api";
 import { typesBundleForPolkadot } from "@crustio/type-definitions";
 import { Keyring } from "@polkadot/keyring";
 import { PrismaClient } from "@prisma/client";
-import "dotenv/config"; // Load environment variables from .env file
+import "dotenv/config";
 
-// --- Configuration ---
 const config = {
   crustChainEndpoint:
     process.env.CRUST_CHAIN_ENDPOINT || "wss://rpc.crust.network",
@@ -23,7 +22,6 @@ if (!config.crustSeeds) {
   process.exit(1);
 }
 
-// --- Main Execution Logic ---
 async function main() {
   let api;
   const prisma = new PrismaClient();
@@ -75,8 +73,6 @@ async function main() {
     console.log("[INFO] Cleanup complete.");
   }
 }
-
-// --- Helper Functions ---
 
 async function connectToCrust(endpoint) {
   const provider = new WsProvider(endpoint);
